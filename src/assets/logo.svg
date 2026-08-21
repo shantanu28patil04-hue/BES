@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 130" width="100%" height="100%">
+  <defs>
+    <linearGradient id="besBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2C59" />
+      <stop offset="100%" stop-color="#1E3A8A" />
+    </linearGradient>
+    <linearGradient id="besRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#B91C1C" />
+    </linearGradient>
+    <linearGradient id="besGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <filter id="besGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Logo Emblem Icon -->
+  <g transform="translate(10, 10)" filter="url(#dropShadow)">
+    <!-- Hexagonal Shield / Gear Base (Dark Blue) -->
+    <polygon points="55,5 98,28 98,78 55,102 12,78 12,28" fill="url(#besBlueGrad)" stroke="#1E40AF" stroke-width="2.5" />
+    <polygon points="55,12 90,32 90,74 55,94 20,74 20,32" fill="#0A192F" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="6 3" />
+    
+    <!-- Red Chevron Accent -->
+    <path d="M 28 36 L 55 58 L 82 36 L 55 22 Z" fill="url(#besRedGrad)" />
+    
+    <!-- Electric Circuit / Lightning Bolt (Yellow Accent) -->
+    <path d="M 58 20 L 42 54 L 54 54 L 46 88 L 68 48 L 54 48 Z" fill="url(#besGoldGrad)" filter="url(#besGlow)" />
+    
+    <!-- Tech dots / Nodes -->
+    <circle cx="55" cy="5" r="3.5" fill="#F59E0B" />
+    <circle cx="98" cy="28" r="3.5" fill="#EF4444" />
+    <circle cx="98" cy="78" r="3.5" fill="#3B82F6" />
+    <circle cx="55" cy="102" r="3.5" fill="#F59E0B" />
+    <circle cx="12" cy="78" r="3.5" fill="#3B82F6" />
+    <circle cx="12" cy="28" r="3.5" fill="#EF4444" />
+  </g>
+
+  <!-- Brand Typography -->
+  <!-- Main "BES" Text -->
+  <g transform="translate(128, 62)">
+    <text x="0" y="0" font-family="'Outfit', 'Inter', 'Segoe UI', sans-serif" font-size="52" font-weight="900" letter-spacing="3" fill="#0F2C59">
+      B<tspan fill="#DC2626">E</tspan><tspan fill="#0F2C59">S</tspan>
+    </text>
+    <!-- Lightning accent next to BES -->
+    <path d="M 124 -36 L 114 -16 L 122 -16 L 116 2 L 132 -20 L 122 -20 Z" fill="#F59E0B" />
+  </g>
+
+  <!-- Tagline: BEST ENGINEERING SERVICES -->
+  <g transform="translate(130, 88)">
+    <rect x="-2" y="-14" width="355" height="2" fill="url(#besGoldGrad)" rx="1" />
+    <text x="0" y="0" font-family="'Inter', 'Segoe UI', sans-serif" font-size="14.5" font-weight="800" letter-spacing="2.8" fill="#1E3A8A">
+      BEST ENGINEERING SERVICES
+    </text>
+  </g>
+
+  <!-- Subtitle: Electrician & Appliance Repair -->
+  <g transform="translate(130, 108)">
+    <text x="0" y="0" font-family="'Inter', 'Segoe UI', sans-serif" font-size="11" font-weight="600" letter-spacing="1.2" fill="#DC2626">
+      ELECTRICIAN &amp; HOME APPLIANCE REPAIR
+    </text>
+  </g>
+</svg>

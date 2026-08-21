@@ -1,0 +1,108 @@
+/* BES Brand Theme Stylesheet */
+:root {
+  --bes-navy: #0F2C59;
+  --bes-navy-dark: #0A192F;
+  --bes-navy-light: #1E3A8A;
+  --bes-red: #DC2626;
+  --bes-red-light: #EF4444;
+  --bes-red-dark: #991B1B;
+  --bes-yellow: #F59E0B;
+  --bes-yellow-light: #FDE047;
+  --bes-yellow-dark: #D97706;
+  --bes-slate-bg: #F8FAFC;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.4), 0 0 30px rgba(220, 38, 38, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.7), 0 0 45px rgba(220, 38, 38, 0.4);
+  }
+}
+
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes sparkFlash {
+  0%, 100% { opacity: 0.3; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+.animate-float {
+  animation: floatAnim 4s infinite ease-in-out;
+}
+
+.animate-spark {
+  animation: sparkFlash 2s infinite ease-in-out;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-card-dark {
+  background: rgba(15, 44, 89, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Map Pin Marker Animations */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid #e2e8f0;
+}
+
+/* Gradient Text Utilities */
+.text-gradient-bes {
+  background: linear-gradient(135deg, #0F2C59 0%, #1E3A8A 50%, #DC2626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Step Wizard Connector Line */
+.step-line-active {
+  background: linear-gradient(90deg, #1E3A8A 0%, #DC2626 100%);
+}
+
+/* Touch feedback for mobile */
+.tap-highlight-none {
+  -webkit-tap-highlight-color: transparent;
+}

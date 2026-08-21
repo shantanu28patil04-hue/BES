@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>BES – Best Engineering Services | Professional Electrician &amp; Home Appliance Repair</title>
+  <meta name="description" content="Book a trusted BES technician for electrical work and home appliance repair services at your doorstep. Verified electricians, GPS location booking, and fast response.">
+
+  <!-- Favicon with BES Emblem -->
+  <link rel="icon" type="image/jpeg" href="./src/assets/logo.jpg">
+
+  <!-- Google Fonts: Outfit (Display) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            bes: {
+              navy: '#0F2C59',
+              'navy-dark': '#0A192F',
+              'navy-light': '#1E3A8A',
+              red: '#DC2626',
+              'red-light': '#EF4444',
+              'red-dark': '#991B1B',
+              yellow: '#F59E0B',
+              'yellow-light': '#FDE047',
+              'yellow-dark': '#D97706',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Leaflet CSS & JS for Interactive Map Selection -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- Custom App Styles -->
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-red-500 selection:text-white pb-16 md:pb-0">
+  
+  <!-- Root App Shell -->
+  <div id="app" class="flex flex-col min-h-screen">
+    <!-- Initial Loading State -->
+    <div class="min-h-screen flex items-center justify-center bg-[#0F2C59] text-white">
+      <div class="text-center space-y-4">
+        <div class="w-16 h-16 border-4 border-amber-400 border-t-transparent rounded-full animate-spin mx-auto"></div>
+        <div class="font-display font-black text-2xl tracking-wider">BES – BEST ENGINEERING SERVICES</div>
+        <p class="text-xs text-slate-300">Loading Doorstep Electrician &amp; Appliance Platform...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- App Entry Module -->
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
